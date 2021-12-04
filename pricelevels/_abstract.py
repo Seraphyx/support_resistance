@@ -27,7 +27,7 @@ class BaseLevelFinder:
     def fit(self, data):
         if isinstance(data, pd.DataFrame):
             X = data['Close'].values
-        elif isinstance(data, np.array):
+        elif isinstance(data, np.ndarray):
             X = data
         else:
             raise InvalidArgumentException(
